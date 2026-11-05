@@ -6,6 +6,17 @@ HR Workforce & Performance Analytics is a data analytics project designed to ana
 
 The project uses Python for data cleaning and analysis, MySQL for database management and SQL queries, and Power BI for interactive data visualization.
 
+## Project Diagrams
+
+### Diagram 1
+![Diagram 1](Photo/Diagram-1.png)
+
+### Diagram 2
+![Diagram 2](Photo/Diagram-2.png)
+
+### Diagram 3
+![Diagram 3](Photo/Diagram-3.png)
+
 ## Project Objectives
 
 - Analyze employee demographics and workforce distribution.
