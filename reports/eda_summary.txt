@@ -1,0 +1,24 @@
+
+HR WORKFORCE PERFORMANCE ANALYTICS
+EXPLORATORY DATA ANALYSIS SUMMARY
+
+Total Employees: 10000
+Active Employees: 8488
+Inactive Employees: 1512
+
+Average Age: 41.27
+Average Experience: 5.92 years
+Average Gross Salary: 75550.08
+Average Performance Rating: 3.78
+
+Total Departments: 9
+Total Job Roles: 16
+
+Highest Employee Count Department:
+Product (1166 employees)
+
+Highest Average Salary Department:
+Customer Service
+
+Highest Average Performance Rating Department:
+HR
