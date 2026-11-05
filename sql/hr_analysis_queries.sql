@@ -194,3 +194,67 @@ INNER JOIN salaries s
 INNER JOIN departments d
     ON s.dept_id = d.dept_id
 ORDER BY d.dept_name, department_salary_rank;
+
+
+
+
+-- 13. Hiring Trends by Year
+SELECT
+    YEAR(hire_date) AS hiring_year,
+    COUNT(*) AS employees_hired
+FROM employees
+GROUP BY YEAR(hire_date)
+ORDER BY hiring_year;
+
+
+-- 14. Employee Distribution by Location
+SELECT
+    state,
+    city,
+    COUNT(*) AS employee_count
+FROM employees
+GROUP BY state, city
+ORDER BY employee_count DESC;
+
+
+-- 15. Salary Compared with Job Role Benchmark
+SELECT
+    j.position,
+    COUNT(*) AS employee_count,
+    ROUND(AVG(s.basic_salary), 2) AS average_basic_salary,
+    ROUND(AVG(j.base_salary), 2) AS role_benchmark,
+    ROUND(AVG(s.basic_salary - j.base_salary), 2)
+        AS average_salary_difference
+FROM salaries s
+JOIN job_roles j ON s.role_id = j.role_id
+GROUP BY j.role_id, j.position
+ORDER BY average_salary_difference DESC;
+
+
+-- 16. Performance Bonus by Department
+SELECT
+    d.dept_name,
+    COUNT(*) AS employee_count,
+    ROUND(AVG(s.performance_bonus), 2) AS average_bonus,
+    ROUND(SUM(s.performance_bonus), 2) AS total_bonus
+FROM salaries s
+JOIN departments d ON s.dept_id = d.dept_id
+GROUP BY d.dept_id, d.dept_name
+ORDER BY average_bonus DESC;
+
+
+-- 17. Experience and Salary Analysis
+SELECT
+    CASE
+        WHEN year_of_exp < 2 THEN '0-1 Years'
+        WHEN year_of_exp < 5 THEN '2-4 Years'
+        WHEN year_of_exp < 10 THEN '5-9 Years'
+        ELSE '10+ Years'
+    END AS experience_group,
+    COUNT(*) AS employee_count,
+    ROUND(AVG(basic_salary), 2) AS average_basic_salary,
+    ROUND(AVG(gross_salary), 2) AS average_gross_salary
+FROM salaries
+GROUP BY experience_group
+ORDER BY MIN(year_of_exp);
+
