@@ -1,0 +1,25 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Private employee datasets
+data/raw/emp_info.csv
+data/raw/emp_salary.csv
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Editor files
+.vscode/
