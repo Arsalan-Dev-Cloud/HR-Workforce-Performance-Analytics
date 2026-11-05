@@ -68,3 +68,17 @@ print(department.dtypes)
 
 print("\n========== JOB ROLES DATA TYPES ==========")
 print(job_roles.dtypes)
+
+print("\n========== MISSING VALUES ==========")
+
+print("\nEmployee Information:")
+print(emp_info.isnull().sum())
+
+print("\nEmployee Salaries:")
+print(emp_salaries.isnull().sum())
+
+print("\nDepartments:")
+print(department.isnull().sum())
+
+print("\nJob Roles:")
+print(job_roles.isnull().sum())
