@@ -65,5 +65,7 @@ Thumbs.db
 *.tmp
 *.log
 
+# .txt files
 resume.txt
 project_explaination.txt
+interview_question.txt
